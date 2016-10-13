@@ -10,7 +10,12 @@ Gra będzie napisana przy użyciu HTML 5 , CSS3 oraz Javascriptu z biblioteką P
 * Wykonanie ekranu gry z tłem i graczem
 * Opracowanie ruchu gracza i podstawowego strzału
 * Dodanie obcych
-* Opracowanie strzału obcych
+* Opracowanie strzału obcych ( gotowy prototyp )
 * Dodanie losowych pakietów ulepszających broń
 * Opracowanie strzału ulepszonego
-* 
+* Ogólne dopracowanie mechaniki gry
+* Dodanie naliczania punktów
+* Ustalenie żywotności gracza
+* Koniec gry i wyświetlenie punktów
+* Stworzenie ekranu z instrukcją gry
+* Gotowy Projekt !
