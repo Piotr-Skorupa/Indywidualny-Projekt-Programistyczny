@@ -1,17 +1,38 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
+    <title>Space Mudafuka v1.0</title>
     <meta charset="utf-8" />
     <script src="_js/phaser.js"></script>
-    <script src="_js/kod.js"></script>
+    <script src="_js/Boot.js"></script>
+    <script src="_js/Preload.js"></script>
+    <script src="_js/Menu.js"></script>
+    <script src="_js/Game.js"></script>
+    <script src="_js/Jak.js"></script>
+
     <style>
-        body{background-color:chartreuse;}
-       
+        body {
+            background-color: chartreuse;
+        }
     </style>
 
 </head>
+
 <body>
-    <div id="okno">
-    </div>
+    <script>
+        (function() {
+            var game = new Phaser.Game(800, 600, Phaser.CANVAS, 'game');
+            game.state.add('Game', gra.Games);
+            game.state.add('How', gra.How);
+            game.state.add('Preload', gra.Preload);
+            game.state.add('Menu', gra.Menu);
+            game.state.add('Boot', gra.Boot);
+            game.state.start('Boot');
+
+
+        })();
+    </script>
 </body>
+
 </html>
