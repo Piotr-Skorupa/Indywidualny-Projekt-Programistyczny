@@ -3,6 +3,10 @@ var gra = {
     _HEIGHT: 600
 };
 
+
+var xx;
+var yy;
+var laser;
 var background;
 var back2;
 var back3;
@@ -24,6 +28,7 @@ var attacka;
 var speed = 6;
 var fireButton;
 var keyboard;
+var esc;
 
 gra.Boot = function(game) {};
 gra.Boot.prototype = {

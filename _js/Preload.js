@@ -9,6 +9,8 @@ gra.Preload.prototype = {
         this.load.image('ship', 'src/statek.png');
         this.load.image('jako', 'src/jako.png');
         this.load.image('ufo', 'src/wrog.png');
+        this.load.image('laser', 'src/laser.png');
+        this.load.image('laser2', 'src/laser2.png');
 
     },
     create: function() {

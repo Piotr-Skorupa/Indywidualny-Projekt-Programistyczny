@@ -4,41 +4,48 @@ gra.Games.prototype = {
         this.physics.startSystem(Phaser.Physics.ARCADE);
 
 
-        // attack = 1; //atak gracza
-        // attacka = 1; //atak obcego
-        // life = 3; //zycie gracza
-        // lifea = 2; //zycie obcego az do "lifea3" 
-        // lifea1 = 2;
-        // lifea2 = 2;
-        // lifea3 = 2;
+        attack = 1; //atak gracza
+        attacka = 1; //atak obcego
+        life = 3; //zycie gracza
+        lifea = 2; //zycie obcego az do "lifea3" 
+        lifea1 = 2;
+        lifea2 = 2;
+        lifea3 = 2;
 
+        // stworzenie spritów
         back2 = this.add.tileSprite(0, 0, 800, 600, 'star');
 
         gracz = this.add.sprite(350, 500, 'ship');
         this.physics.enable(gracz, Phaser.Physics.ARCADE);
-        // gracz.anchor.setTo(0, 0);
 
         alien = this.add.sprite(50, 100, 'ufo');
-        // this.physics.enable(gracz, Phaser.Physics.ARCADE);
 
         alien1 = this.add.sprite(200, 100, 'ufo');
-        // this.physics.enable(gracz, Phaser.Physics.ARCADE);
 
         alien2 = this.add.sprite(350, 100, 'ufo');
-        // this.physics.enable(gracz, Phaser.Physics.ARCADE);
 
         alien3 = this.add.sprite(500, 100, 'ufo');
-        // this.physics.enable(gracz, Phaser.Physics.ARCADE);
 
+        //wczytanie przycisków
         keyboard = this.input.keyboard.createCursorKeys();
-
         fireButton = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+        esc = this.game.input.keyboard.addKey(Phaser.Keyboard.ESC);
 
+    },
+    fire: function() {
+
+
+        laser = this.add.sprite(xx, yy, 'laser');
+        this.physics.enable(laser, Phaser.Physics.ARCADE);
+
+        laser.body.velocity.y -= 400;
 
     },
     update: function() {
 
         back2.tilePosition.y += 4;
+        xx = gracz.body.x + 37;
+        yy = gracz.body.y - 46;
 
         if (keyboard.left.isDown) {
             gracz.x -= speed;
@@ -48,9 +55,13 @@ gra.Games.prototype = {
         }
 
         if (fireButton.isDown) {
-            alert("Widzę kiedy wciskasz spacje szmato");
+            this.fire();
         }
 
+        if (esc.isDown) {
+
+            this.state.start('Menu');
+        }
 
         if (gracz.body.x <= 0) gracz.body.x = 1;
         else if (gracz.body.x >= 700) gracz.body.x = 699;
