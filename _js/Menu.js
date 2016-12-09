@@ -16,6 +16,9 @@ gra.Menu.prototype = {
         but2 = this.add.button(300, 370, 'jak', this.action, this, 0, 0, 0);
         this.physics.enable(but2, Phaser.Physics.ARCADE);
         but2.anchor.setTo(0, 0);
+
+        rekordString = 'Ostatni wynik: '
+        rekordText = this.add.text(250, 500, rekordString + score, { font: '30px Lucida Console', fill: 'green' });
     },
 
     actionOnClick: function() {

@@ -3,10 +3,19 @@ var gra = {
     _HEIGHT: 600
 };
 
-
+var rekordString;
+var rekordText;
+var firingTimer = 0;
+var procent = "%"
+var ufoLasers;
+var zeroAliens = true;
+var lasers;
+var aliens;
+var score = 0;
+var scoreText;
+var scoreString = '';
 var xx;
 var yy;
-var laser;
 var background;
 var back2;
 var back3;
@@ -14,21 +23,17 @@ var title;
 var but1;
 var but2;
 var gracz;
-var alien;
-var alien1;
-var alien2;
-var alien3;
-var lifea;
-var lifea1;
-var lifea2;
-var lifea3;
 var life;
+var lifeText;
+var lifeString;
 var attack;
 var attacka;
 var speed = 6;
 var fireButton;
 var keyboard;
 var esc;
+var bulletTime = 0;
+var livingUfo = [];
 
 gra.Boot = function(game) {};
 gra.Boot.prototype = {
