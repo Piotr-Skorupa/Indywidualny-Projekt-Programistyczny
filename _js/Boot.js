@@ -3,6 +3,18 @@ var gra = {
     _HEIGHT: 600
 };
 
+var au;
+var full;
+var zdrowieS;
+var zamianaS;
+var loteryTime = 0;
+var bomba;
+var zdrowie;
+var zamiana;
+var losowanie;
+var tylko = 0;
+var czy_nuta2 = false;
+var czy_nuta = false;
 var rekordString;
 var rekordText;
 var firingTimer = 0;
@@ -27,13 +39,18 @@ var life;
 var lifeText;
 var lifeString;
 var attack;
-var attacka;
 var speed = 6;
 var fireButton;
 var keyboard;
 var esc;
 var bulletTime = 0;
 var livingUfo = [];
+var wybuch;
+var lasergracz;
+var laserufo;
+var menunuta;
+var gamenuta = 0;
+
 
 gra.Boot = function(game) {};
 gra.Boot.prototype = {

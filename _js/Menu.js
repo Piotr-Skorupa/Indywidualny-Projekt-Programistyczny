@@ -3,6 +3,14 @@ gra.Menu.prototype = {
     create: function() {
         this.physics.startSystem(Phaser.Physics.ARCADE);
 
+        if (tylko == 0) {
+            menunuta = this.add.audio('menunuta');
+            menunuta.loopFull(0.7);
+            tylko = 1;
+        }
+
+
+
         background = this.add.sprite(0, 0, 'star');
 
         title = this.add.sprite(100, 80, 'tytul');
@@ -23,7 +31,10 @@ gra.Menu.prototype = {
 
     actionOnClick: function() {
 
+        menunuta.pause();
         this.state.start('Game');
+        czy_nuta2 = false;
+
 
     },
 
@@ -32,6 +43,13 @@ gra.Menu.prototype = {
     },
 
     update: function() {
+
+        if (czy_nuta == false) {
+            menunuta.pause();
+            czy_nuta = true;
+        } else if (czy_nuta == true) {
+            menunuta.resume();
+        }
 
     }
 };
