@@ -19,3 +19,4 @@ Gra będzie napisana przy użyciu HTML 5 , CSS3 oraz Javascriptu z biblioteką P
 * Koniec gry i wyświetlenie punktów
 * Stworzenie ekranu z instrukcją gry
 * Gotowy Projekt !
+http://www.panoramix.ift.uni.wroc.pl/~pskorupa/ipp/Indywidualny-Projekt-Programistyczny/part1.html  - link do gry
